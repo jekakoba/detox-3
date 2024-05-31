@@ -1,0 +1,107 @@
+.page {
+	// .page__hero
+	&__hero {
+		&:not(:last-child) {
+			margin-bottom: toRem(87);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(50);
+			}
+		}
+	}
+	// .page__recognizing
+	&__recognizing {
+		margin-bottom: toRem(70);
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	// .page__our-approach
+	&__our-approach {
+		&:not(:last-child) {
+			margin-bottom: toRem(100);
+		}
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(50);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
+	}
+	&__contact-us {
+	}
+}
+
+.title {
+	color: var(--grayDark);
+	font-size: toRem(50);
+	font-weight: 600;
+	line-height: 1.17;
+	text-transform: capitalize;
+	@media (max-width: $tablet) {
+		font-size: toRem(40);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(24);
+	}
+	&_big {
+		font-size: toRem(60);
+		font-weight: 700;
+		line-height: 1.23;
+		color: var(--secondary-text);
+		@media (max-width: $mobile) {
+			font-size: toRem(45);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(36);
+		}
+	}
+}
+.text {
+	p {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+}
+.swiper-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(10);
+	height: toRem(30);
+	.swiper-pagination-bullet {
+		width: toRem(10);
+		height: toRem(10);
+		border-radius: 50%;
+		border: toRem(2) solid black;
+		background-color: var(--pure-white);
+		border: toRem(1.2) solid rgba(37, 68, 65, 0.2);
+		transition: all 0.3s;
+		cursor: pointer;
+	}
+	.swiper-pagination-bullet-active {
+		position: relative;
+		background-color: var(--brand--primary);
+		width: toRem(19);
+		height: toRem(19);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: toRem(7);
+			height: toRem(7);
+			border-radius: 50%;
+			background-color: var(--darkGreen);
+		}
+	}
+}
